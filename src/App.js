@@ -9,39 +9,34 @@ import Budget from './components/Budget';
 
 
 import { AppProvider } from './context/AppContext';
+import Remaining from './components/Remaining';
+import ExpenseTotal from './components/ExpenseTotal';
+import AllocationForm from './components/AllocationForm';
+import ExpenseList from './components/ExpenseList';
 const App = () => {
-    return (
-        <AppProvider>
-            <div className='container'>
-                <h1 className='mt-3'>Company's Budget Allocation</h1>
-                    <div className='row mt-3'>
-                        {
-                            /* Add Budget component here */
-                        }        
+return (
+<AppProvider>
+    <div className='container'>
+        <h1 className='mt-3'>Company's Budget Allocation</h1>
+            <div className='row mt-3'>
+                <div className='col-sm'>
+                    <Budget />
+                </div>      
 
-                        {
-                            /* Add Remaining component here*/
-                        }        
+                <div className='col-sm'>
+                    <Remaining />    
+                </div>    
 
-                        {
-                            /* Add ExpenseTotal component here */
-                        }        
-                       
-                        {
-                            /* Add ExpenseList component here */
-                        }         
+                <div className='col-sm'>
+                    <ExpenseTotal />
+                </div>             
 
-                        {
-                            /* Add ExpenseItem component here */
-                        }        
+                <ExpenseList /> 
+                <AllocationForm />
 
-                        {
-                            /* Add AllocationForm component here under */
-                        }        
-
-                </div>
-            </div>
-        </AppProvider>
-    );
+        </div>
+    </div>
+</AppProvider>
+);
 };
 export default App;
